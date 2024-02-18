@@ -13,6 +13,7 @@ function FrontPage() {
     // make ref so that the champions slide into view
     const championsDivRef = useRef(null);
 
+    // @ts-expect-error
     const loadChampion = async (championName) => {
         try {
             const championData = await import(`../../dragontail-14.3.1/14.3.1/data/en_US/champion/${championName}.json`);
@@ -28,6 +29,7 @@ function FrontPage() {
         }
     }
     
+    // @ts-expect-error
     const handleInput = async (event) => {
         if (event.key == 'Enter') {
             setChampion([]);
@@ -41,6 +43,7 @@ function FrontPage() {
             for (const champName of championNamesList) {
                 await loadChampion(champName.trim());
             }
+            // @ts-expect-error
             championsDivRef.current.scrollIntoView({behavior: 'smooth'});
             // window.scrollTo({top: championsDivRef.current.offsetTop, behavior: 'smooth'});
         }
