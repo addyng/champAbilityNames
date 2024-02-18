@@ -51,7 +51,7 @@ function FrontPage() {
 
     return(
         <div id="rootElement" className="flex flex-col">
-            <input type="text" onKeyDown={handleInput} className="bg-blue-500 text-center placeholder-black" placeholder="Please enter in a comma separated list with the champions named capitalized, remove spaces and apostrophes if the champion has those characters"></input>
+            <input type="text" onKeyDown={handleInput} className="bg-blue-500 text-center placeholder-black" placeholder="Please enter in a comma separated list with the champions named capitalized, remove spaces and apostrophes if the champion has those characters" autoFocus></input>
             {/* data[championNames[0]] works because data is an object with keys of type string and since we used dynamic [], need to do championNames[0] */}
             {/* <div>{champion[0] ? JSON.stringify(champion[0].data[championNames[0]].spells[0].id) : 'loool'}</div> */}
             {/* <div>{champion[1] ? JSON.stringify(champion[1].data[championNames[1]].spells) : 'loool'}</div> */}
